@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-06T01:27:31.973Z",
+    "end": "2023-12-06T01:27:39.665Z",
+    "duration": 7692,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bf334bec-0a0e-4dac-8118-e306747d73ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b94bffd-4f8f-40ce-a34f-23ecfa8b8fb7",
+          "title": "Tela de login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "realizar login com usuario valido",
+              "fullTitle": "Tela de login realizar login com usuario valido",
+              "timedOut": null,
+              "duration": 5047,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//instanciando objeto com as informações para login\nvar usuario = new _user.default.user();\n//validando o login\n_page_login.default.loginfillForm(usuario);\n//verificando se logou pelo url\ncy.url().should('equal', 'https://empresamodelo.softcomshop.com.br/home');",
+              "err": {},
+              "uuid": "ebcce76c-e285-4800-8619-e4e6e7053127",
+              "parentUUID": "0b94bffd-4f8f-40ce-a34f-23ecfa8b8fb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "realizar login com usuario invalido",
+              "fullTitle": "Tela de login realizar login com usuario invalido",
+              "timedOut": null,
+              "duration": 2596,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//instanciando objeto com as informações para login\nvar usuario = new _user.default.userinvalido();\n//validando o login\n_page_login.default.loginfillForm(usuario);\n//verificando a mensagem de erro\ncy.get('#login-erro').contains('Email ou senha não foram encontrado(s) em nosso sistema.');",
+              "err": {},
+              "uuid": "7f22ee03-73e2-444a-98b5-c3d08eab6197",
+              "parentUUID": "0b94bffd-4f8f-40ce-a34f-23ecfa8b8fb7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebcce76c-e285-4800-8619-e4e6e7053127",
+            "7f22ee03-73e2-444a-98b5-c3d08eab6197"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7643,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
